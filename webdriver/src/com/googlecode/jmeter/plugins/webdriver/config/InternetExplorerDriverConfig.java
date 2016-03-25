@@ -31,6 +31,7 @@ public class InternetExplorerDriverConfig extends WebDriverConfig<InternetExplor
     Capabilities createCapabilities() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.PROXY, createProxy());
+        capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
         return capabilities;
     }
 
